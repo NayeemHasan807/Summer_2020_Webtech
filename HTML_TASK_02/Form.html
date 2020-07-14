@@ -3,29 +3,61 @@
 </head>
 <body>
 	<form>
-	    <table border="2" align="center" height="600px" width="500px">
+	    <table border="1" align="center" height="600px" width="500px">
 			<tr>
-				<td colspan="3" align="center" height="15" ><h1> Personal Profile </h1> </td>
+				<td colspan="3" align="center" height="5" ><h2> Personal Profile </h2> </td>
 			    </tr>
 			    <tr>
-					<td height="10" width="20">Name</td>
-		    		<td height="10" width="50"><input type="text" name="textbox"></td>
-		    		<td height="10" width="15"></td>
+					<td height="5" width="20">Name</td>
+		    		<td height="5" width="50"><input type="text" name="textbox"></td>
+		    		<td height="5" width="15"></td>
 		    </tr>
 			<tr>
-			   	<td height="10" width="20">Email</td>
-			   	<td height="10" width="50"><input type="email" name="textbox"></td>
-			   	<td height="10" width="15"></td>
+			   	<td height="5" width="20">Email</td>
+			   	<td height="5" width="50"><input type="email" name="textbox"></td>
+			   	<td height="5" width="15"></td>
 		    </tr>
 			<tr>
-			    <td height="10" width="20">Gender</td>
-				<td height="10" width="50">
+			    <td height="5" width="20">Gender</td>
+				<td height="5" width="50">
 				   	<input type="radio" name="gender">Male
 				   	<input type="radio" name="gender">Female
 				   	<input type="radio" name="gender">Other
 				</td>
-				<td height="10" width="15"></td>
+				<td height="5" width="15"></td>
 		    </tr>
+		    <tr>
+			   	<td height="5" width="20">Date of Birth</td>
+			   	<td height="5" width="50">
+			   		<textarea cols="1" rows="1" width="15"></textarea><font size=5>/</font><textarea cols="1" rows="1" width="15"></textarea><font size=5>/</font><textarea cols="1" rows="1" width="15"></textarea> (dd/mm/yyyy)
+			   	</td>
+			   	<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+			    <td height="5" width="20">Blood Group</td>
+				<td height="5" width="50">
+				   	<select>
+				   		<option>A+</option>
+				   		<option>A-</option>
+				   		<option>B+</option>
+				   		<option>B-</option>
+				   		<option>Ab+</option>
+				   		<option>O+</option>
+				   		<option>O-</option>
+				   	</select>
+				</td>
+				<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+			    <td height="5" width="20">Degree</td>
+				<td height="5" width="50">
+				   	<input type="checkbox" name="degree">SSC
+				   	<input type="checkbox" name="degree">HSC
+				   	<input type="checkbox" name="degree">BSc.
+				   	<input type="checkbox" name="degree">MSc.
+				</td>
+				<td height="5" width="15"></td>
+		    </tr>	
 	    </table>
 	</form>
 </body>
