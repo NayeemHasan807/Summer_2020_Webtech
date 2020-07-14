@@ -1,25 +1,26 @@
 <html>
 <head>
+	<title>Personal Profile</title>
 </head>
 <body>
 	<form>
-	    <table border="1" align="center" height="600px" width="500px">
+	    <table border="1" align="center" height="600px" width="600px">
 			<tr>
-				<td colspan="3" align="center" height="5" ><h2> Personal Profile </h2> </td>
+				<td colspan="3" align="center" height="5" ><h1> Personal Profile </h1> </td>
 			    </tr>
 			    <tr>
-					<td height="5" width="20">Name</td>
-		    		<td height="5" width="50"><input type="text" name="textbox"></td>
+					<td height="5" width="30">Name</td>
+		    		<td height="5" width="40"><input type="text" name="textbox"></td>
 		    		<td height="5" width="15"></td>
 		    </tr>
 			<tr>
-			   	<td height="5" width="20">Email</td>
-			   	<td height="5" width="50"><input type="email" name="textbox"></td>
+			   	<td height="5" width="30">Email</td>
+			   	<td height="5" width="40"><input type="email" name="textbox"></td>
 			   	<td height="5" width="15"></td>
 		    </tr>
 			<tr>
-			    <td height="5" width="20">Gender</td>
-				<td height="5" width="50">
+			    <td height="5" width="30">Gender</td>
+				<td height="5" width="40">
 				   	<input type="radio" name="gender">Male
 				   	<input type="radio" name="gender">Female
 				   	<input type="radio" name="gender">Other
@@ -27,15 +28,20 @@
 				<td height="5" width="15"></td>
 		    </tr>
 		    <tr>
-			   	<td height="5" width="20">Date of Birth</td>
-			   	<td height="5" width="50">
-			   		<textarea cols="1" rows="1" width="15"></textarea><font size=5>/</font><textarea cols="1" rows="1" width="15"></textarea><font size=5>/</font><textarea cols="1" rows="1" width="15"></textarea> (dd/mm/yyyy)
+			   	<td height="5" width="30">Date of Birth</td>
+			   	<td height="5" width="40">
+			   		<textarea cols="2" rows="1"></textarea>
+			   		<font size=5>/</font>
+			   		<textarea cols="2" rows="1"></textarea>
+			   		<font size=5>/</font>
+			   		<textarea cols="4" rows="1"></textarea> 
+			   		(dd/mm/yyyy)
 			   	</td>
 			   	<td height="5" width="15"></td>
 		    </tr>
 		    <tr>
-			    <td height="5" width="20">Blood Group</td>
-				<td height="5" width="50">
+			    <td height="5" width="30">Blood Group</td>
+				<td height="5" width="40">
 				   	<select>
 				   		<option>A+</option>
 				   		<option>A-</option>
@@ -49,14 +55,27 @@
 				<td height="5" width="15"></td>
 		    </tr>
 		    <tr>
-			    <td height="5" width="20">Degree</td>
-				<td height="5" width="50">
+			    <td height="5" width="30">Degree</td>
+				<td height="5" width="40">
 				   	<input type="checkbox" name="degree">SSC
 				   	<input type="checkbox" name="degree">HSC
 				   	<input type="checkbox" name="degree">BSc.
 				   	<input type="checkbox" name="degree">MSc.
 				</td>
 				<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+		    	<td height="5" width="30">Photo</td>
+		    	<td colspan="2"><input type="file" name="photo">
+		    </tr>
+		    <tr>
+		    	<td colspan="3" height="20"></td>
+		    </tr>
+		    <tr>
+		    	<td colspan="3" height="20" align="right">
+		    		<input type="Submit" name="button" value="Submit" >
+		    		<input type="Reset" name="button" value="Reset" > 
+		    	</td>
 		    </tr>	
 	    </table>
 	</form>
