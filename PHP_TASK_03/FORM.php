@@ -161,6 +161,16 @@
 
 		echo "</br>";
 
+		if(isset($_POST['degree']))
+		{
+			echo "Degree is selected";
+		}
+		else
+			echo "Degree in not selected";
+
+		echo "</br>";
+
+
 
 	}
 
