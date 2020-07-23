@@ -1,0 +1,85 @@
+<!DOCTYPE html><html>
+<head>
+	<title>Person Profile</title>
+</head>
+<body>
+	<form action="BACKEND.php" method="post">
+	    <table border="1" align="center" height="600px" width="600px">
+			<tr>
+				<td colspan="3" align="center" height="5" ><h1> PERSON PROFILE </h1> </td>
+			    </tr>
+			    <tr>
+					<td height="5" width="30">Name</td>
+		    		<td height="5" width="40"><input type="text" name="name"></td>
+		    		<td height="5" width="15"></td>
+		    </tr>
+			<tr>
+			   	<td height="5" width="30">Email</td>
+			   	<td height="5" width="40"><input type='type' name="email"></td>
+			   	<td height="5" width="15"></td>
+		    </tr>
+			<tr>
+			    <td height="5" width="30">Gender</td>
+				<td height="5" width="40">
+				   	<input type="radio" name="gender">Male
+				   	<input type="radio" name="gender">Female
+				   	<input type="radio" name="gender">Other
+				</td>
+				<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+			   	<td height="5" width="30">Date of Birth</td>
+			   	<td height="5" width="40">
+			   		<input type="text" name="day" size="2">/
+			   		<input type="text" name="month" size="2">/
+			   		<input type="text" name="year" size="4">
+			   		(dd/mm/yyyy)
+			   	</td>
+			   	<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+			    <td height="5" width="30">Blood Group</td>
+				<td height="5" width="40">
+				   	<select name="Blood_Group" required> <!--auto without select form can't be submitted -->
+				   		<option value="">None</option>
+				   		<!--<option>None</option> to do validation manually -->
+				   		<option>A+</option>
+				   		<option>A-</option>
+				   		<option>B+</option>
+				   		<option>B-</option>
+				   		<option>Ab+</option>
+				   		<option>O+</option>
+				   		<option>O-</option>
+				   	</select>
+				</td>
+				<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+			    <td height="5" width="30">Degree</td>
+				<td height="5" width="40">
+				   	<input type="checkbox" name="degree">SSC
+				   	<input type="checkbox" name="degree">HSC
+				   	<input type="checkbox" name="degree">BSc.
+				   	<input type="checkbox" name="degree">MSc.
+				</td>
+				<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+		    	<td height="5" width="30">User Id</td>
+		    	<td height="5" width="40"><input type="number" name="user_id"></td>
+		    	<td height="5" width="15"></td>
+		    </tr>
+		    <tr>
+		    	<td height="5" width="30">Photo</td>
+		    	<td colspan="2"><input type="file" name="photo">
+		    </tr>
+		    <tr>
+		    	<td colspan="3" height="20" align="right">
+		    		<input type="Submit" name="submit" value="Submit" >
+		    		<input type="Reset" name="reset" value="Reset" > 
+		    	</td>
+		    </tr>	
+	    </table>
+	</form>
+</body>
+</html>
