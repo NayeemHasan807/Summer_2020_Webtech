@@ -10,7 +10,7 @@
 			    </tr>
 			    <tr>
 					<td height="5" width="30">Name</td>
-		    		<td height="5" width="40"><input type="text" name="Name"></td>
+		    		<td height="5" width="40"><input type="text" name="name"></td>
 		    		<td height="5" width="15"></td>
 		    </tr>
 			<tr>
@@ -83,9 +83,9 @@
 <?php
 	if(isset($_POST['submit']))
 	{
-		if($_POST['Name'] !="" and str_word_count($_POST['Name'])>=2)
+		if($_POST['name'] !="" and str_word_count($_POST['name'])>=2)
 		{
-			$a=str_split($_POST['Name']);
+			$a=str_split($_POST['name']);
 			//print_r($a);
 			$decision="Name is valid";
 			if($a['0']=='a' or $a['0']=='b'  or $a['0']=='c' or $a['0']=='d'  or $a['0']=='e' or $a['0']=='f'  or $a['0']=='g' or $a['0']=='h'  or $a['0']=='i' or $a['0']=='j'  or $a['0']=='k' or $a['0']=='l'  or $a['0']=='m' or $a['0']=='n'  or $a['0']=='o' or $a['0']=='p'  or $a['0']=='q' or $a['0']=='r'  or $a['0']=='s' or $a['0']=='t'  or $a['0']=='u' or $a['0']=='v'  or $a['0']=='w' or $a['0']=='x'  or $a['0']=='y' or $a['0']=='z'  or $a['0']=='A' or $a['0']=='B'  or $a['0']=='C' or $a['0']=='D'  or $a['0']=='E' or $a['0']=='F'  or $a['0']=='G' or $a['0']=='H'  or $a['0']=='I' or $a['0']=='J'  or $a['0']=='K' or $a['0']=='L'  or $a['0']=='M' or $a['0']=='N' or $a['0']=='O' or $a['0']=='P'  or $a['0']=='Q' or $a['0']=='R'  or $a['0']=='S' or $a['0']=='T'  or $a['0']=='U' or $a['0']=='V'  or $a['0']=='W' or $a['0']=='X'  or $a['0']=='Y' or $a['0']=='Z')
@@ -102,11 +102,48 @@
 				echo $decision;
 			}
 			else
-				echo "Name is invalid";
+				echo "Name is invalid " ;
 		}
 		else
-			echo "Name is invalid";	
+			echo "Name is invalid";
+
+		echo "</br>";
+
+		if($_POST['email'] !="")
+		{
+			$c=0;
+			$b= str_split($_POST['email']);
+			for($i=0; $i<count($b); $i++)
+			{
+				if($b[$i]=='@')
+				{
+					$c++;
+				}
+				else
+					continue;
+			}
+			if($c==1)
+			{
+				$d=explode('@', $_POST['email']);
+				$e=explode('.', $d[1]);
+				$f;
+				for($i=0; $i<count($e); $i++)
+				{
+					$f=$e[$i];
+				}
+
+				if($e=="com")
+					echo "Email is valid";
+				else
+					echo "Email is invalid";
+			}
+
+		}
+		else
+			echo "Email is invalid ";
+
+		echo "</be>";
+
 	}
-	else
-		echo "Name is invalid";
+
  ?>
