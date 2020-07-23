@@ -15,7 +15,7 @@
 		    </tr>
 			<tr>
 			   	<td height="5" width="30">Email</td>
-			   	<td height="5" width="40"><input type="email" name="email"></td>
+			   	<td height="5" width="40"><input type='type' name="email"></td>
 			   	<td height="5" width="15"></td>
 		    </tr>
 			<tr>
@@ -131,18 +131,28 @@
 				{
 					$f=$e[$i];
 				}
-
-				if($e=="com")
+				if($f=="com" or $f=="edu")
 					echo "Email is valid";
 				else
 					echo "Email is invalid";
 			}
+			else
+				echo "Email is invalid";
 
 		}
 		else
 			echo "Email is invalid ";
 
-		echo "</be>";
+		echo "</br>";
+
+		if(isset($_POST['gender']))
+		{
+			echo "Gender is selected";
+		}
+		else
+			echo "Gender in not selected";
+
+		echo "</br>";
 
 	}
 
