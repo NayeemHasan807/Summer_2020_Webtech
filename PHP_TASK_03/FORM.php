@@ -154,6 +154,14 @@
 
 		echo "</br>";
 
+		if($_POST['day'] != "" and $_POST['day'] >='1' and $_POST['day'] <= '31' and $_POST['month'] != "" and $_POST['month'] >='1' and $_POST['month'] <= '12' and $_POST['year'] != "" and $_POST['year'] >='1900' and $_POST['year'] <= '2016'  )
+			echo "DOB is valid";
+		else
+			echo "DOB is invalid";
+
+		echo "</br>";
+
+
 	}
 
  ?>
