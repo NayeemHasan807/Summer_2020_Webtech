@@ -40,7 +40,9 @@
 		    <tr>
 			    <td height="5" width="30">Blood Group</td>
 				<td height="5" width="40">
-				   	<select>
+				   	<select name="Blood_Group" required> //auto without select form can't be submitted
+				   		<option value="">None</option>
+				   		<option>None</option> //to do validation manually
 				   		<option>A+</option>
 				   		<option>A-</option>
 				   		<option>B+</option>
@@ -170,8 +172,15 @@
 
 		echo "</br>";
 
+		if($_POST['Blood_Group']!="None")
+		{
+			echo "Blood group is selected";
+		}
+		else
+			echo "Blood group in not selected";
 
+		echo "</br>";
 
 	}
 
- ?>
+?>
