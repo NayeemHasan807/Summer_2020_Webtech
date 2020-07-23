@@ -40,9 +40,9 @@
 		    <tr>
 			    <td height="5" width="30">Blood Group</td>
 				<td height="5" width="40">
-				   	<select name="Blood_Group" required> //auto without select form can't be submitted
+				   	<select name="Blood_Group" required> <!--auto without select form can't be submitted -->
 				   		<option value="">None</option>
-				   		<option>None</option> //to do validation manually
+				   		<!--<option>None</option> to do validation manually -->
 				   		<option>A+</option>
 				   		<option>A-</option>
 				   		<option>B+</option>
@@ -65,11 +65,13 @@
 				<td height="5" width="15"></td>
 		    </tr>
 		    <tr>
-		    	<td height="5" width="30">Photo</td>
-		    	<td colspan="2"><input type="file" name="photo">
+		    	<td height="5" width="30">User Id</td>
+		    	<td height="5" width="40"><input type="number" name="user_id"></td>
+		    	<td height="5" width="15"></td>
 		    </tr>
 		    <tr>
-		    	<td colspan="3" height="20"></td>
+		    	<td height="5" width="30">Photo</td>
+		    	<td colspan="2"><input type="file" name="photo">
 		    </tr>
 		    <tr>
 		    	<td colspan="3" height="20" align="right">
@@ -178,6 +180,20 @@
 		}
 		else
 			echo "Blood group in not selected";
+
+		echo "</br>";
+
+		if($_POST['user_id']!="" and $_POST['user_id']>=0)
+			echo "User Id is valid";
+		else
+			echo "User Id is invalid";
+
+		echo "</br>";
+
+		if($_POST['photo']!="")
+			echo "Photo is uploaded";
+		else
+			echo "Photo is not uploaded";
 
 		echo "</br>";
 
