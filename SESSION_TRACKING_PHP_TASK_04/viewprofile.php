@@ -68,7 +68,19 @@
 										?>
 									</td>
 									<td width="40%" rowspan="7" align="center">
-										<img width="128" src="../image/user.png"/>
+										<!---<?php
+											if(!empty($_SESSION))
+											{
+												echo "<img height='128' width='128' src='".$$_SESSION['image']."'/>";
+											}
+											else
+											{
+												echo $_COOKIE['image'];
+												echo "<img height='128' width='128' src='".$$_COOKIE['image']."'/>";	
+											}
+											 
+										?>--->
+					                    <img height='128' width='128' src="anime.png"/>
 					                    <br/>
 					                    <a href="changeprofilepicture.php">Change</a>
 									</td>
