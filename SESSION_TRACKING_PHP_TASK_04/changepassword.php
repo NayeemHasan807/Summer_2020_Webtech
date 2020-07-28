@@ -41,10 +41,10 @@
                     <hr/>
                     <ul>
                         <li><a href="loggedindashboard.php">Dashboard</a></li>
-                        <li><a href="">View Profile</a></li>
-                        <li><a href="">Edit Profile</a></li>
-                        <li><a href="">Change Profile Picture</a></li>
-                        <li><a href="">Change Password</a></li>
+                        <li><a href="viewprofile.php">View Profile</a></li>
+                        <li><a href="editprofile.php">Edit Profile</a></li>
+                        <li><a href="changeprofilepicture.php">Change Profile Picture</a></li>
+                        <li><a href="changepassword.php">Change Password</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </td>
