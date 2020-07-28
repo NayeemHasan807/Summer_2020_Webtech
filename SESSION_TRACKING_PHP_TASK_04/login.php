@@ -11,31 +11,30 @@
 				{
 					header('location:loggedindashboard.php');
 				}
-				elseif(!empty($_SESSION['userName']) and !empty($_SESSION['password']))
+				else
+					echo "Invalid UserName Or Password!";
+			}
+			elseif(!empty($_SESSION['userName']) and !empty($_SESSION['password']))
+			{
+				if($_SESSION['userName']==$_POST['userName'] and $_SESSION['password']==$_POST[password])
 				{
-					if(isset($_SESSION))
-					{
-						setcookie('userName',$_SESSION['userName'],time()+36000,'/');
-						setcookie('password',md5($_SESSION['password']),time()+36000,'/');
-						setcookie('name',$_SESSION['name'],time()+36000,'/');
-						setcookie('email',$_SESSION['email'],time()+36000,'/');
-						setcookie('gender',$_SESSION['gender'],time()+36000,'/');
-						setcookie('day',$_SESSION['day'],time()+36000,'/');
-						setcookie('month',$_SESSION['month'],time()+36000,'/');
-						setcookie('year',$_SESSION['year'],time()+36000,'/');
-						setcookie('status',"set",time()+36000,'/');
-						session_destroy();
-						header('location:loggedindashboard.php');
-					}
-					else
-						echo "Register To Login";
+					setcookie('userName',$_SESSION['userName'],time()+36000,'/');
+					setcookie('password',md5($_SESSION['password']),time()+36000,'/');
+					setcookie('name',$_SESSION['name'],time()+36000,'/');
+					setcookie('email',$_SESSION['email'],time()+36000,'/');
+					setcookie('gender',$_SESSION['gender'],time()+36000,'/');
+					setcookie('day',$_SESSION['day'],time()+36000,'/');
+					setcookie('month',$_SESSION['month'],time()+36000,'/');
+					setcookie('year',$_SESSION['year'],time()+36000,'/');
+					setcookie('status',"set",time()+36000,'/');
+					session_destroy();
+					header('location:loggedindashboard.php');
 				}
 				else
 					echo "Invalid Username Or Password!";
-			}
+		    }
 			else
 				echo "Invalid Username Or Password!";
-			
 		}
 		elseif($_POST['userName'] != "" and $_POST['password'] !="")
 		{
