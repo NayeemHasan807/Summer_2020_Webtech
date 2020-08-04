@@ -16,23 +16,28 @@
 			$user = explode('/r/n', $data);
 
 
-			while(!feof($data)){
-				$user = fgets($data);
-				$user = explode('|', $data);
-			}
+			while(!feof($user))
+			{
+				$suser = fgets($user);
+				$ssuser = explode('|', $suser);
+				if(trim($ssuser['0']) == $_POST['userid'] && trim($ssuser['1']) == $_POST['password'])
+				{
+					$_SESSION['usertype'] = trim($ssuser['4']);
+					$_SESSION['status']  = "Ok";
+					echo "welcome";
+					//header('location:home.php');
+				}
+				else
+					continue;
 
-			print_r($user);
-
-			if(trim($user[0]) == $uname && trim($user[1]) == $password){
-				$_SESSION['status']  = "Ok";
-				header('location:home.php');
-			}else{
-				echo "Invalid username/password";
 			}
 		}
 
-	}else{
-		header("location: login.html");
+	}
+	else
+	{
+		echo "bash";
+		//header("location:login.html");
 	}
 
 
