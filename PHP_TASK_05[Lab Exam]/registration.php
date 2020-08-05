@@ -12,7 +12,7 @@
 			if($_POST['password'] == $_POST['cpassword'])
 			{
 				$file = fopen('user.txt', 'a');
-				fwrite($file, $_POST['id'].'|'.$_POST['password'].'|'.$_POST['name'].'|'.$_POST['email'].'|'.$_POST['usertype']."/r/n");
+				fwrite($file, $_POST['id'].'|'.$_POST['password'].'|'.$_POST['name'].'|'.$_POST['email'].'|'.$_POST['usertype']."\r\n");
 				fclose($file);
 
 				header('location:login.html');

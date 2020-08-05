@@ -12,20 +12,36 @@
 		{
 			
 			$file = fopen('user.txt', 'r');
-			$data = fread($file, filesize('user.txt'));
-			$user = explode('/r/n', $data);
 
-
-			while(!feof($user))
+			while(!feof($file))
 			{
-				$suser = fgets($user);
-				$ssuser = explode('|', $suser);
+				$user = fgets($file);
+				$ssuser = explode('|', $user);
 				if(trim($ssuser['0']) == $_POST['userid'] && trim($ssuser['1']) == $_POST['password'])
 				{
-					$_SESSION['usertype'] = trim($ssuser['4']);
-					$_SESSION['status']  = "Ok";
-					echo "welcome";
-					//header('location:home.php');
+					if(isset($_POST['rememberme']))
+					{
+						setcookie('id',$ssuser['0'],time()+10000,'/');
+						setcookie('password',md5($ssuser['1']),time()+10000,'/');
+						setcookie('name',$ssuser['2'],time()+10000,'/');
+						setcookie('email',$ssuser['3'],time()+10000,'/');
+						setcookie('usertype',$ssuser['4'],time()+10000,'/');
+						setcookie('status','set',time()+10000,'/');
+						//header('location:home.php');
+
+					}
+					else
+					{
+						$_SESSION['id']= trim($ssuser['0']);
+						$_SESSION['password']= trim($ssuser['1']);
+						$_SESSION['name']= trim($ssuser['2']);
+						$_SESSION['email']= trim($ssuser['3']);
+						$_SESSION['usertype'] = trim($ssuser['4']);
+						$_SESSION['status']  = "set";
+						echo "gg";
+						//header('location:home.php');
+
+					}
 				}
 				else
 					continue;
@@ -36,8 +52,7 @@
 	}
 	else
 	{
-		echo "bash";
-		//header("location:login.html");
+		header("location:login.html");
 	}
 
 
