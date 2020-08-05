@@ -19,6 +19,8 @@
 <html>
 <head>
 	<title>Profile</title>
+</head>
+<body>
 	<table align="center" border="1">
 		<tr>
 			<td colspan="2" align="center">
@@ -76,8 +78,6 @@
 		</tr>
 		
 	</table>
-</head>
-<body>
 
 </body>
 </html>

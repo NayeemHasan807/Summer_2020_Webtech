@@ -19,6 +19,8 @@
 <html>
 <head>
 	<title>Home</title>
+</head>
+<body>
 	<table align="center" border="1">
 		<tr>
 			<td colspan="5" align="center">
@@ -65,8 +67,5 @@
 		</tr>
 		
 	</table>
-</head>
-<body>
-
 </body>
 </html>
