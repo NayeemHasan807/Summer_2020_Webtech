@@ -6,7 +6,6 @@
 		{
 			header('location:login.html');
 		}
-		$usertype=$_SESSION['usertype'];
 	}
 	else
 	{
@@ -14,7 +13,6 @@
 		{
 			header('location:Login.html');
 		}
-		$usertype=$_COOKIE['usertype'];
 	}
 ?>
 <!DOCTYPE html>
@@ -27,18 +25,40 @@
 				<?php
 					if(!empty($_SESSION))
 					{
-						echo "<h1>Welcome ".$_SESSION['name']."!</h1><br/>";
-						echo "<a href='profile.php'>Profile</a><br/>";
-						echo "<a href='changepassword.php'>Change Password</a><br/>";
-						echo "<a href='logout.php'>Logout</a><br/><br/>";
+						if($_SESSION['usertype']=="User")
+						{
+							echo "<h1>Welcome ".$_SESSION['name']."!</h1><br/>";
+							echo "<a href='profile.php'>Profile</a><br/>";
+							echo "<a href='changepassword.php'>Change Password</a><br/>";
+							echo "<a href='logout.php'>Logout</a><br/><br/>";
+						}
+						else
+						{
+							echo "<h1>Welcome ".$_SESSION['name']."!</h1><br/>";
+							echo "<a href='profile.php'>Profile</a><br/>";
+							echo "<a href='changepassword.php'>Change Password</a><br/>";
+							echo "<a href='viewusers.php'>view Users</a><br/>";
+							echo "<a href='logout.php'>Logout</a><br/><br/>";
+						}
+						
 					}
 					else
 					{
-						echo "<h1>Welcome ".$_COOKIE['name']."!</h1><br/>";
-						echo "<a href='profile.php'>Profile</a><br/>";
-						echo "<a href='changepassword.php'>Change Password</a><br/>";
-						echo "<a href='viewusers.html'>Profile</a><br/>";
-						echo "<a href='logout.php'>Logout</a><br/><br/>";
+						if($_COOKIE['usertype']=="Admin")
+						{
+							echo "<h1>Welcome ".$_COOKIE['name']."!</h1><br/>";
+							echo "<a href='profile.php'>Profile</a><br/>";
+							echo "<a href='changepassword.php'>Change Password</a><br/>";
+							echo "<a href='viewusers.php'>View Users</a><br/>";
+							echo "<a href='logout.php'>Logout</a><br/><br/>";
+						}
+						else
+						{
+							echo "<h1>Welcome ".$_COOKIE['name']."!</h1><br/>";
+							echo "<a href='profile.php'>Profile</a><br/>";
+							echo "<a href='changepassword.php'>Change Password</a><br/>";
+							echo "<a href='logout.php'>Logout</a><br/><br/>";
+						}
 					}
 				?> 
 			</td>

@@ -22,11 +22,11 @@
 				{
 					if(isset($_POST['rememberme']))
 					{
-						setcookie('id',$ssuser['0'],time()+10000,'/');
-						setcookie('password',md5($ssuser['1']),time()+10000,'/');
-						setcookie('name',$ssuser['2'],time()+10000,'/');
-						setcookie('email',$ssuser['3'],time()+10000,'/');
-						setcookie('usertype',$ssuser['4'],time()+10000,'/');
+						setcookie('id',trim($ssuser['0']),time()+10000,'/');
+						setcookie('password',md5(trim($ssuser['1'])),time()+10000,'/');
+						setcookie('name',trim($ssuser['2']),time()+10000,'/');
+						setcookie('email',trim($ssuser['3']),time()+10000,'/');
+						setcookie('usertype',trim($ssuser['4']),time()+10000,'/');
 						setcookie('status','set',time()+10000,'/');
 						header('location:home.php');
 						$confirm="ok";
