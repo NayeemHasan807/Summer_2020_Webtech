@@ -37,7 +37,7 @@
 							echo "<h1>Welcome ".$_SESSION['name']."!</h1><br/>";
 							echo "<a href='profile.php'>Profile</a><br/>";
 							echo "<a href='changepassword.php'>Change Password</a><br/>";
-							echo "<a href='viewusers.php'>view Users</a><br/>";
+							echo "<a href='viewusers.php'>View Users</a><br/>";
 							echo "<a href='logout.php'>Logout</a><br/><br/>";
 						}
 						
