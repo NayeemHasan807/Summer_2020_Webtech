@@ -15,6 +15,7 @@
 
 			while(!feof($file))
 			{
+				$confirm="notok";
 				$user = fgets($file);
 				$ssuser = explode('|', $user);
 				if(trim($ssuser['0']) == $_POST['userid'] && trim($ssuser['1']) == $_POST['password'])
@@ -28,6 +29,7 @@
 						setcookie('usertype',$ssuser['4'],time()+10000,'/');
 						setcookie('status','set',time()+10000,'/');
 						header('location:home.php');
+						$confirm="ok";
 
 					}
 					else
@@ -39,6 +41,7 @@
 						$_SESSION['usertype'] = trim($ssuser['4']);
 						$_SESSION['status']  = "set";
 						header('location:home.php');
+						$confirm="ok";
 
 					}
 				}
@@ -46,6 +49,12 @@
 					continue;
 
 			}
+
+			if($confirm=="notok")
+			{
+				echo "Wrong user id or password!";
+			}
+
 		}
 
 	}
