@@ -1,6 +1,20 @@
 <?php
 	require_once('../php/session_header.php');
-
+	if (isset($_GET['error'])) 
+	{
+		if($_GET['error'] == 'db_error')
+		{
+			echo "Something went wrong...please try again";
+		}
+		elseif ($_GET['error'] == 'null_error')
+		{
+			echo "null submission...please try again";
+		}
+		elseif($_GET['error'] == 'id_already_exist')
+		{
+			echo "this id already exist";
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +53,7 @@
 				</tr>
 				<tr>
 					<td>User account id</td>
-					<td><input type="text" name="user account id"></td>
+					<td><input type="text" name="user_account_id"></td>
 				</tr>
 				<tr>
 					<td></td>

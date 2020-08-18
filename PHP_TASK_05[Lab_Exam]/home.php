@@ -11,7 +11,7 @@
 	{
 		if(empty($_COOKIE['status']))
 		{
-			header('location:Login.html');
+			header('location:login.html');
 		}
 	}
 ?>
