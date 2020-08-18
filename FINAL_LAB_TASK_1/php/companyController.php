@@ -4,7 +4,7 @@
 	require_once('../service/companyService.php');
 
 
-	//add user
+	//add company info
 	if(isset($_POST['create'])){
 		$id = $_POST['id'];
 		$company_name = $_POST['company_name'];
@@ -42,3 +42,18 @@
 				header('location: ../views/createcompanyinfo.php?error=id_already_exist');
 		}
 	}
+
+	//delete company info
+	if(isset($_POST['yes'])){
+
+		$id = $_POST['id'];
+		$status = delete($id);
+
+		if($status){
+			header('location: ../views/all_company.php?success=done');
+		}
+	}
+	elseif(isset($_POST['no']))
+		header('location: ../views/all_company.php')
+
+?>

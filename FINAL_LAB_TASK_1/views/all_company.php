@@ -39,8 +39,8 @@
 			<td><?=$companies[$i]['company_logo']?></td>
 			<td><?=$companies[$i]['user_account_id']?></td>
 			<td>
-				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="editcompany.php?id=<?=$companies[$i]['id']?>">Edit</a> |
+				<a href="deletecompany.php?id=<?=$companies[$i]['id']?>">Delete</a> 
 			</td>
 		</tr>
 
