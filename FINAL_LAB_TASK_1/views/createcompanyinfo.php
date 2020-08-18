@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add user</title>
+	<title>Add company info</title>
 </head>
 <body>
 
