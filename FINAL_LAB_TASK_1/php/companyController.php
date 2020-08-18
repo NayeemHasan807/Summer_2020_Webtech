@@ -43,6 +43,41 @@
 		}
 	}
 
+	//update user
+	if(isset($_POST['edit'])){
+
+		$id = $_POST['id'];
+		$company_name = $_POST['company_name'];
+		$profile_description = $_POST['profile_description'];
+		$industry = $_POST['industry'];
+		$company_website = $_POST['company_website'];
+		$company_logo = $_POST['company_logo'];
+		$user_account_id = $_POST['user_account_id'];
+
+		if(empty($id) || empty($company_name) || empty($profile_description) || empty($industry) || empty($company_website) || empty($company_logo) || empty($user_account_id)){
+			header('location: ../views/editcompany.php?id={$id}');
+		}else{
+
+			$company = [
+				'id'=> $id,
+				'company_name'=> $company_name,
+				'profile_description'=> $profile_description,
+				'industry'=> $industry,
+				'company_website'=>$company_website,
+				'company_logo'=>$company_logo,
+				'user_account_id'=>$user_account_id
+			];
+
+			$status = update($company);
+
+			if($status){
+				header('location: ../views/all_company.php?success=done');
+			}else{
+				header('location: ../views/editcompany.php?id={$id}');
+			}
+		}
+	}
+
 	//delete company info
 	if(isset($_POST['yes'])){
 

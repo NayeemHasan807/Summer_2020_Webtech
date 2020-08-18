@@ -40,20 +40,20 @@
 	//update user
 	if(isset($_POST['edit'])){
 
+		$id 		= $_POST['id'];
 		$username 	= $_POST['username'];
 		$password 	= $_POST['password'];
 		$email 		= $_POST['email'];
-		$id 		= $_POST['id'];
 
 		if(empty($username) || empty($password) || empty($email)){
 			header('location: ../views/edit.php?id={$id}');
 		}else{
 
 			$user = [
+				'id'=> $id
 				'username'=> $username,
 				'password'=> $password,
 				'email'=> $email,
-				'id'=> $id
 			];
 
 			$status = update($user);
