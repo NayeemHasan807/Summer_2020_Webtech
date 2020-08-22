@@ -14,6 +14,11 @@
 		{
 			echo "this id already exist";
 		}
+		elseif($_GET['error'] == 'img_error')
+		{
+			echo "file you uploaded is not an image file";
+		}
+
 	}
 ?>
 <!DOCTYPE html>
@@ -23,7 +28,7 @@
 </head>
 <body>
 
-	<form action="../php/companyController.php" method="post">
+	<form action="../php/companyController.php" method="post" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Create New Company Info</legend>
 			<table>
@@ -49,7 +54,7 @@
 				</tr>
 				<tr>
 					<td>Company logo</td>
-					<td><input type="text" name="company_logo"></td>
+					<td><input type="file" name="company_logo"></td>
 				</tr>
 				<tr>
 					<td>User account id</td>

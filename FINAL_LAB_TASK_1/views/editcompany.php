@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<form action="../php/companyController.php" method="post">
+	<form action="../php/companyController.php" method="post"> <!-- enctype="multipart/form-data">-->
 		<fieldset>
 			<legend>Edit Company Info</legend>
 			<table>
@@ -36,10 +36,10 @@
 					<td>Company website</td>
 					<td><input type="text" name="company_website" value="<?=$company['company_website']?>"></td>
 				</tr>
-				<tr>
+				<!--<tr>
 					<td>Company logo</td>
-					<td><input type="text" name="company_logo" value="<?=$company['company_logo']?>"></td>
-				</tr>
+					<td><input type="file" name="company_logo" ></td>
+				</tr>-->
 				<tr>
 					<td>User account id</td>
 					<td><input type="text" name="user_account_id" value="<?=$company['user_account_id']?>"></td>
@@ -48,6 +48,7 @@
 					<td></td>
 					<td>
 						<input type="hidden" name="id" value="<?=$company['id']?>">
+						<input type="hidden" name="company_logo" value="<?=$company['company_logo']?>">
 						<input type="submit" name="edit" value="Update"> 
 						<a href="all_company.php">Back</a>
 					</td>

@@ -50,7 +50,7 @@
 		}else{
 
 			$user = [
-				'id'=> $id
+				'id'=> $id,
 				'username'=> $username,
 				'password'=> $password,
 				'email'=> $email,
