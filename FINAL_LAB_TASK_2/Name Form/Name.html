@@ -2,18 +2,22 @@
 <html>
 <head>
 	<title>Name</title>
+	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form>
+	<form onsubmit="return validate()">
 		<table cellpadding="2">
 			<tr>
 				<td>Name</td>
+				<td></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Name"></td>
+				<td><input type="text" id="name" name="name" onkeyup="clicks()"></td>
+				<td id="show"></td>
 			</tr>
 			<tr>
-				<td><input type="Submit" name="Submit" value="Submit"></td>
+				<td><input type="submit" name="submit" value="submit"></td>
+				<td id="eva"></td>
 			</tr>
 		</table>
 	</form>
