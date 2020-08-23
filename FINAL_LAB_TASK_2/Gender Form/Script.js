@@ -1,8 +1,10 @@
 function validate()
 {
 	var show = document.getElementById("show");
-	var gender = document.getElementById("gender").checked;
-	if( gender == true)
+	var check1 = document.getElementById("male").checked;
+	var check2 = document.getElementById("female").checked;
+	var check3 = document.getElementById("other").checked;
+	if( check1 == true || check2 == true || check3 == true)
 	{
 		return true;
 	}

@@ -5,14 +5,16 @@
 	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form  onsubmit="return validate()">
+	<form action="Gender.php" method="post" onsubmit="return validate()">
 		<fieldset>
 			<legend>Gender</legend>
 			<table cellpadding="2">
 				<tr>
-					<input id="gender" type="radio" name="gender" onclick="clicks()" value="Male">Male
-				   	<input id="gender" type="radio" name="gender" onclick="clicks()" value="Female">Female
-				   	<input id="gender" type="radio" name="gender" onclick="clicks()" value="Other">Other
+					<td>
+						<input id="male" type="radio" name="gender" value="Male" onclick="clicks()">Male
+					   	<input id="female" type="radio" name="gender" value="Female" onclick="clicks()">Female
+					   	<input id="other" type="radio" name="gender" value="Other" onclick="clicks()">Other
+					</td>
 					<td id="show"></td>
 				</tr>
 				<tr>
