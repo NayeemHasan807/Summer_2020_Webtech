@@ -1,5 +1,6 @@
 function validate()
 {
+	var show = document.getElementById("show");
 	var a = document.getElementById("name").value;
 	if( a != "")
 	{
@@ -41,7 +42,6 @@ function validate()
 					}
 					else
 					{
-						var show = document.getElementById("show");
 						show.innerHTML = "Can contain a-z or A-Z or dot(.) or dash(-)";
 						return false;	
 					}
@@ -50,14 +50,12 @@ function validate()
 			}
 			else
 			{
-				var show = document.getElementById("show");
 				show.innerHTML = "Must start with a letter";
 				return false;
 			}
 		}
 		else
 		{
-			var show = document.getElementById("show");
 			show.innerHTML = "Contains at least two words";
 			return false;
 		}	
@@ -65,7 +63,6 @@ function validate()
 	}
 	else
 	{
-		var show = document.getElementById("show");
 		show.innerHTML = "Cannot be empty";
 		return false;
 	}

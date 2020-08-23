@@ -2,16 +2,17 @@
 <html>
 <head>
 	<title>Email</title>
+	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form>
+	<form onsubmit="return validate()">
 		<table cellpadding="2">
 			<tr>
 				<td>Email</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="text" id="email" name="email"></td>
+				<td><input type="text" id="email" name="email" onkeyup="clicks()"></td>
 				<td id="show"></td>
 			</tr>
 			<tr>
