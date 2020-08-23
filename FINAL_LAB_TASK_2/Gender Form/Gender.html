@@ -2,16 +2,17 @@
 <html>
 <head>
 	<title>Gender</title>
+	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form>
+	<form  onsubmit="return validate()">
 		<fieldset>
 			<legend>Gender</legend>
 			<table cellpadding="2">
 				<tr>
-					<input type="radio" name="gender">Male
-				   	<input type="radio" name="gender">Female
-				   	<input type="radio" name="gender">Other
+					<input id="gender" type="radio" name="gender" onclick="clicks()" value="Male">Male
+				   	<input id="gender" type="radio" name="gender" onclick="clicks()" value="Female">Female
+				   	<input id="gender" type="radio" name="gender" onclick="clicks()" value="Other">Other
 					<td id="show"></td>
 				</tr>
 				<tr>
