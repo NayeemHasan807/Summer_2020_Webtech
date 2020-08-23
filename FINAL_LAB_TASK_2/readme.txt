@@ -1,0 +1,1 @@
+Here, From validation using JavaScript and Form Submission using PHP is done. 
