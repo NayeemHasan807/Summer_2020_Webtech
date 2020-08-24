@@ -2,23 +2,24 @@
 <html>
 <head>
 	<title>Profile Picture</title>
+	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form>
+	<form onsubmit="return validate()">
 		<fieldset>
 			<legend>Profile Picture</legend>
 			<table cellpadding="2">
 				<tr>
-					<td>Id</td>
+					<td>User Id</td>
 					<td>
-						<input type="text" name="id">
+						<input type="text" id="userid" name="userid" onkeyup="clicks1()">
 					</td>
 					<td id="show1"></td>
 				</tr>
 				<tr>
 					<td>Picture</td>
 					<td>
-						<input type="file" name="picture">
+						<input type="file" id="picture" name="picture" onclick="clicks2()">
 					</td>
 					<td id="show2"></td>
 				</tr>
