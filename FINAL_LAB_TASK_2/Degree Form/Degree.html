@@ -5,15 +5,15 @@
 	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form onsubmit="return validate()">
+	<form action="Degree.php" method="post" onsubmit="return validate()">
 		<fieldset>
 			<legend>Gender</legend>
 			<table cellpadding="2">
 				<tr>
 					<td>
-						<input type="checkbox" id="ssc" name="degree" onclick="clicks()">SSC
-					   	<input type="checkbox" id="hsc" name="degree" onclick="clicks()">HSC
-				   		<input type="checkbox" id="bsc" name="degree" onclick="clicks()">BSc.
+						<input type="checkbox" id="ssc" name="ssc" value="SSC" onclick="clicks()">SSC
+					   	<input type="checkbox" id="hsc" name="hsc" value="HSC" onclick="clicks()">HSC
+				   		<input type="checkbox" id="bsc" name="bsc" value="BSc" onclick="clicks()">BSc.
 					</td>
 					<td id="show"></td>
 				</tr>

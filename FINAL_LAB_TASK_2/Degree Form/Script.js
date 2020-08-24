@@ -1,10 +1,10 @@
 function validate()
 {
 	var show = document.getElementById("show");
-	var check1 = document.getElementById("ssc").checked;
-	var check2 = document.getElementById("hsc").checked;
-	var check3 = document.getElementById("bsc").checked;
-	if( check1 == true || check2 == true || check3 == true)
+	var ssc = document.getElementById("ssc").checked;
+	var hsc = document.getElementById("hsc").checked;
+	var bsc = document.getElementById("bsc").checked;
+	if( ssc == true || hsc == true || bsc == true)
 	{
 		return true;
 	}
