@@ -51,5 +51,5 @@
 		
 	}
 	else
-		header('location:Gender.html');
+		header('location:Degree.html');
 ?>
