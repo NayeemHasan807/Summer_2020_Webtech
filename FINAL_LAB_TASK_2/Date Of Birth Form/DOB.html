@@ -2,17 +2,18 @@
 <html>
 <head>
 	<title>Date Of Birth</title>
+	<script type="text/javascript" src="Script.js"></script>
 </head>
 <body>
-	<form>
+	<form onsubmit="return validate()">
 		<fieldset>
 			<legend>Date Of Birth</legend>
 			<table cellpadding="2">
 				<tr>
 					<td>
-						<input type="text" name="day" size="1">/
-			   			<input type="text" name="month" size="1">/
-			   			<input type="text" name="year" size="3">
+						<input type="text" id="day" name="day" size="1" onkeyup="clicks()">/
+			   			<input type="text" id="month" name="month" size="1" onkeyup="clicks()">/
+			   			<input type="text" id="year" name="year" size="3" onkeyup="clicks()">
 					</td>
 					<td id="show"></td>
 				</tr>
