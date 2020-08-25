@@ -4,7 +4,7 @@
 	<script type="text/javascript" src="form.js"></script>
 </head>
 <body>
-	<form onsubmit="return validate()">
+	<form method="post" onsubmit="return validate()">
 	    <table cellpadding="5" cellspacing="0" border="1" align="center" height="600px" width="600px">
 			<tr>
 				<td colspan="3" align="center" height="5" ><h1> PERSON PROFILE </h1> </td>
@@ -31,9 +31,9 @@
 		    <tr>
 			   	<td>Date of Birth</td>
 			   	<td>
-			   		<input type="text" id="day" name="day" size="1" onkeyup="clicks()">/
-			   		<input type="text" id="month" name="month" size="1" onkeyup="clicks()">/
-			   		<input type="text" id="year" size="2" onkeyup="clicks()">
+			   		<input type="text" id="day" name="day" size="1" onkeyup="clicks4()">/
+			   		<input type="text" id="month" name="month" size="1" onkeyup="clicks4()">/
+			   		<input type="text" id="year" size="2" onkeyup="clicks4()">
 			   		(dd/mm/yyyy)
 			   	</td>
 				<td id="show4"></td>
@@ -41,7 +41,7 @@
 		    <tr>
 			    <td>Blood Group</td>
 				<td>
-				   	<select id="bloodgroup" name="bloodgroup" onclick="clicks()">
+				   	<select id="bloodgroup" name="bloodgroup" onclick="clicks5()">
 				   		<option value="">None</option>
 			   			<option value="A+">A+</option>
 			   			<option value="A-">A-</option>
@@ -52,27 +52,27 @@
 				   		<option value="O-">O-</option>
 				   	</select>
 				</td>
-				<td></td>
+				<td id="show5"></td>
 		    </tr>
 		    <tr>
 			    <td>Degree</td>
 				<td>
-				   	<input type="checkbox" name="ssc" value="SSC">SSC
-				   	<input type="checkbox" name="hsc" value="HSC">HSC
-				   	<input type="checkbox" name="bsc" value="BSc">BSc.
-				   	<input type="checkbox" name="msc" value="MSc">MSc.
+				   	<input type="checkbox" id="ssc" name="ssc" value="SSC" onclick="clicks6()">SSC
+				   	<input type="checkbox" id="hsc" name="hsc" value="HSC" onclick="clicks6()">HSC
+				   	<input type="checkbox" id="bsc" name="bsc" value="BSc" onclick="clicks6()">BSc.
+				   	<input type="checkbox" id="msc" name="msc" value="MSc" onclick="clicks6()">MSc.
 				</td>
-				<td></td>
+				<td id="show6"></td>
 		    </tr>
 		    <tr>
 		    	<td>User Id</td>
-		    	<td><input type="text" name="userid"></td>
-				<td></td>
+		    	<td><input type="text" id="userid" name="userid" onkeyup="clicks7()"></td>
+				<td id="show7"></td>
 		    </tr>
 		    <tr>
 		    	<td>Photo</td>
-		    	<td><input type="file" name="picture">
-		    	<td></td>
+		    	<td><input type="file" id="picture" name="picture" onclick="clicks8()">
+		    	<td id="show8"></td>
 		    </tr>
 		    <tr>
 		    	<td colspan="3" align="right">

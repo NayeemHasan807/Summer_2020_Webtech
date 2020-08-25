@@ -82,7 +82,51 @@ function validate()
 											var bloodgroup = document.getElementById("bloodgroup").value;
 											if( bloodgroup != "")
 											{
-												return true;
+												var show5 = document.getElementById("show5");
+												var ssc = document.getElementById("ssc").checked;
+												var hsc = document.getElementById("hsc").checked;
+												var bsc = document.getElementById("bsc").checked;
+												var msc = document.getElementById("msc").checked;
+												if( ssc == true || hsc == true || bsc == true || msc == true)
+												{
+													var show7 = document.getElementById("show7");
+													var show8 = document.getElementById("show8");
+													var userid = document.getElementById("userid").value;
+													var picture = document.getElementById("picture").value;
+
+													if( userid != "" && userid > 0)
+													{
+														if( picture != "")
+														{
+															var check = picture.split(".");
+															if( check[1] == "jpg" || check[1] == "png" || check[1] == "jpeg" || check[1] == "JPG" || 
+																check[1] == "PNG" || check[1] == "JPEG")
+															{
+																return true;
+															}
+															else
+															{
+																show8.innerHTML = "Please upload an image file";
+																return false;
+															}
+														}
+														else
+														{
+															show8.innerHTML = "Picture cannot be empty";
+															return false;
+														}
+													}
+													else
+													{
+														show7.innerHTML = "UserId cannot be empty and has to be a positive number";
+														return false;
+													}
+												}
+												else
+												{
+													show6.innerHTML = "At least one of them has to be selected";
+													return false;
+												}
 											}
 											else
 											{
@@ -182,5 +226,23 @@ function clicks4()
 function clicks5()
 {
 	var show = document.getElementById("show5");
+	show.innerHTML = "";
+}
+
+function clicks6()
+{
+	var show = document.getElementById("show6");
+	show.innerHTML = "";
+}
+
+function clicks7()
+{
+	var show = document.getElementById("show7");
+	show.innerHTML = "";
+}
+
+function clicks8()
+{
+	var show = document.getElementById("show8");
 	show.innerHTML = "";
 }
