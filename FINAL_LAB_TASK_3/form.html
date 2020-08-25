@@ -1,17 +1,18 @@
 <!DOCTYPE html><html>
 <head>
 	<title>Person Profile</title>
+	<script type="text/javascript" src="form.js"></script>
 </head>
 <body>
-	<form>
+	<form onsubmit="return validate()">
 	    <table cellpadding="5" cellspacing="0" border="1" align="center" height="600px" width="600px">
 			<tr>
 				<td colspan="3" align="center" height="5" ><h1> PERSON PROFILE </h1> </td>
 			    </tr>
 			    <tr>
 					<td>Name</td>
-		    		<td><input type="text" name="name"></td>
-		    		<td></td>
+		    		<td><input type="text" id="name" name="name" onkeyup="clicks1()"></td>
+		    		<td id="show1"></td>
 		    </tr>
 			<tr>
 			   	<td>Email</td>
