@@ -16,32 +16,32 @@
 		    </tr>
 			<tr>
 			   	<td>Email</td>
-			   	<td><input type='type' name="email"></td>
-			   	<td></td>
+			   	<td><input type='type' id="email" name="email" onkeyup="clicks2()"></td>
+			   	<td id="show2"></td>
 		    </tr>
 			<tr>
 			    <td>Gender</td>
 				<td>
-				   	<input type="radio" name="gender" value="<Male">Male
-				   	<input type="radio" name="gender" value="<Female">Female
-				   	<input type="radio" name="gender" value="<Other">Other
+				   	<input type="radio" name="gender" id="male" value="Male" onclick="clicks3()">Male
+				   	<input type="radio" name="gender" id="female" value="<Female" onclick="clicks3()">Female
+				   	<input type="radio" name="gender" id="other" value="<Other" onclick="clicks3()">Other
 				</td>
-				<td></td>
+				<td id="show3"></td>
 		    </tr>
 		    <tr>
 			   	<td>Date of Birth</td>
 			   	<td>
-			   		<input type="text" name="day" size="1">/
-			   		<input type="text" name="month" size="1">/
-			   		<input type="text" name="year" size="2">
+			   		<input type="text" id="day" name="day" size="1" onkeyup="clicks()">/
+			   		<input type="text" id="month" name="month" size="1" onkeyup="clicks()">/
+			   		<input type="text" id="year" size="2" onkeyup="clicks()">
 			   		(dd/mm/yyyy)
 			   	</td>
-				<td></td>
+				<td id="show4"></td>
 		    </tr>
 		    <tr>
 			    <td>Blood Group</td>
 				<td>
-				   	<select name="bloodgroup">
+				   	<select id="bloodgroup" name="bloodgroup" onclick="clicks()">
 				   		<option value="">None</option>
 			   			<option value="A+">A+</option>
 			   			<option value="A-">A-</option>

@@ -35,16 +35,102 @@ function validate()
 					}
 					else
 						decision="invalid";
+				}
 
-					if(decision=="valid")
+				if(decision=="valid")
+				{
+					var show2 = document.getElementById("show2");
+					var email = document.getElementById("email").value;
+					if( email != "")
 					{
-						return true;
+						var count=0;
+						for( i=0 ; i < email.length ; i++)
+						{
+							if(email[i]=='@')
+							{
+								count++;
+							}
+							else
+								continue;
+						}
+						if(count==1)
+						{
+							var addret = email.split("@");
+							var dot = addret[1].split(".");
+							var last;
+							for( i=0 ; i < dot.length ; i++)
+							{
+								last = dot[i];
+							}
+							if( last == "com" || last == "edu")
+							{
+								var show3 = document.getElementById("show3");
+								var male = document.getElementById("male").checked;
+								var female = document.getElementById("female").checked;
+								var other = document.getElementById("other").checked;
+								if( male == true || female == true || other == true)
+								{
+									var show4 = document.getElementById("show4");
+									var day = document.getElementById("day").value;
+									var month = document.getElementById("month").value;
+									var year = document.getElementById("year").value;
+									if( day != "" && month != "" && year != "")
+									{
+										if( day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900 && year <= 2016 )
+										{
+											var show5 = document.getElementById("show5");
+											var bloodgroup = document.getElementById("bloodgroup").value;
+											if( bloodgroup != "")
+											{
+												return true;
+											}
+											else
+											{
+												show5.innerHTML = "Must be selected";
+												return false;
+											}
+										}
+										else
+										{
+											show4.innerHTML = "Must be a valid number (dd: 0-31, mm: 1-12, yyyy: 1900-2016)";
+											return false;		
+										}
+									}
+									else
+									{
+										show4.innerHTML = "Cannot be empty";
+										return false;
+									}
+								}
+								else
+								{
+									show3.innerHTML = "At least one of them has to be selected";
+									return false;
+								}
+							}
+							else
+							{
+								show2.innerHTML = "Must be a valid email address (i.e anything@example.com)";
+								return false;
+							}
+						}
+						else
+						{
+							show2.innerHTML = "Must be a valid email address (i.e anything@example.com)";
+							return false;
+						}
+
 					}
 					else
 					{
-						show1.innerHTML = "Can contain a-z or A-Z or dot(.) or dash(-)";
-						return false;	
+						show2.innerHTML = "Cannot be empty";
+						return false;
 					}
+				}
+				else
+				{
+					show1.innerHTML = "Can contain a-z or A-Z or dot(.) or dash(-)";
+					return false;	
 				}
 
 			}
@@ -71,6 +157,30 @@ function validate()
 
 function clicks1()
 {
-	var show1 = document.getElementById("show1");
-	show1.innerHTML = "";
+	var show = document.getElementById("show1");
+	show.innerHTML = "";
+}
+
+function clicks2()
+{
+	var show = document.getElementById("show2");
+	show.innerHTML = "";
+}
+
+function clicks3()
+{
+	var show = document.getElementById("show3");
+	show.innerHTML = "";
+}
+
+function clicks4()
+{
+	var show = document.getElementById("show4");
+	show.innerHTML = "";
+}
+
+function clicks5()
+{
+	var show = document.getElementById("show5");
+	show.innerHTML = "";
 }
