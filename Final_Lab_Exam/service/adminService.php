@@ -1,6 +1,19 @@
 <?php
 	require_once('../db/db.php');
 
+	function getByUsername($username){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "select * from author where username={$username}";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
+
 	function validate($admin){
 		$conn = dbConnection();
 
@@ -58,7 +71,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "update users set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where id={$user['id']}";
+		$sql = "update author set authorname='{$author['authorname']}', contactnumber='{$author['contactnumber']}', password='{$author['password']}' where username={$author['username']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;

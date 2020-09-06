@@ -34,8 +34,8 @@
 			<td><?=$authors[$i]['username']?></td>
 			<td><?=$authors[$i]['password']?></td>
 			<td>
-				<a href="editauthor.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="deleteauthor.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="editauthor.php?username=<?=$authors[$i]['username']?>">Edit</a> |
+				<a href="deleteauthor.php?username=<?=$authors[$i]['username']?>">Delete</a> 
 			</td>
 		</tr>
 
