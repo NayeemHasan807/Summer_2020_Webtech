@@ -32,7 +32,7 @@
 
 	<form action="../php/logCheckForAdmin.php" method="post">
 		<fieldset>
-			<legend>SignIn As Admin</legend>
+			<legend>Login As Admin</legend>
 			<table>
 				<tr>
 					<td>Username</td>

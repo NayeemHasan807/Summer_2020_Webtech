@@ -32,7 +32,7 @@
 
 	<form action="../php/logCheckForAuthor.php" method="post">
 		<fieldset>
-			<legend>SignIn</legend>
+			<legend>Login As Author</legend>
 			<table>
 				<tr>
 					<td>Username</td>
