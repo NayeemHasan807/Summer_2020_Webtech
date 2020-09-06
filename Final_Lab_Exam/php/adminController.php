@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	// session_start();
 	require_once('../php/session_header.php');
 	require_once('../service/adminService.php');
 
@@ -34,9 +34,9 @@
 	//update author
 	if(isset($_POST['edit'])){
 
-		$authorname 		= $_POST['authorname'];
+		$authorname 	= $_POST['authorname'];
 		$contactnumber 	= $_POST['contactnumber'];
-		$username 	= $_POST['username'];
+		$username 		= $_POST['username'];
 		$password 		= $_POST['password'];
 
 		if(empty($username) || empty($password) || empty($authorname) || empty($contactnumber)){
@@ -53,7 +53,7 @@
 			$status = update($author);
 
 			if($status){
-				header('location: ../views/all_authorphp?success=done');
+				header('location: ../views/all_author.php?success=done');
 			}else{
 				header('location: ../views/editauthor.php?username={$username}');
 			}
@@ -71,8 +71,16 @@
 			header('location: ../views/all_author.php?success=done');
 		}
 	}
-	elseif(isset($_POST['no']))
-		header('location: ../views/all_author.php')
+	elseif(isset($_POST['no'])){
+		header('location: ../views/all_author.php');
+	}
 
+	//search author
+	if(isset($_POST['username']))
+	{
+		$username = $_POST['username'];
+		$status = search($username);
+		echo $status;
+	}
 	
 ?>

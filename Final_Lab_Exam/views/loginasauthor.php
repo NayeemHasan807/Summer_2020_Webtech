@@ -14,13 +14,7 @@
 			echo "You have to login first...";
 		}
 
-	}else if(isset($_GET['success'])){
-		
-		if($_GET['success'] == 'registration_done'){
-			echo "Registration Done! Now you can login...";
-		}
 	}
-
 ?>
 
 <!DOCTYPE html>
